@@ -8,6 +8,8 @@ class PageLink(models.Model):
     content_A = models.TextField(blank=True)
     content_B = models.TextField(blank=True)
     content_C = models.TextField(blank=True)
+    
+    menu_order = models.PositiveIntegerField(default=0)  # New field for ordering
 
     def __str__(self):
         return self.page_name

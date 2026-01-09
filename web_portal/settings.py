@@ -59,13 +59,17 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
+                'links.context_processors.menu_pages',  # ✅ Add this
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'web_portal.wsgi.application'
 
